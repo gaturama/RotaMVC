@@ -24,9 +24,9 @@ namespace View
       string nome = Console.ReadLine();
       try{
           Controller.Cidade.AlterarCidade(idCidade, nome);
-          Console.WriteLine("Cidade cadastrada com sucesso!");
+          Console.WriteLine("Cidade alterada com sucesso!");
       }catch(Exception e) {
-        Console.WriteLine($"Erro ao cadastrar cidade: {e.Message}");
+        Console.WriteLine($"Erro ao alterar cidade: {e.Message}");
       }
    }
    
@@ -36,9 +36,9 @@ namespace View
       string idCidade = Console.ReadLine();
       try{
           Controller.Cidade.ExcluirCidade(idCidade);
-          Console.WriteLine("Cidade cadastrada com sucesso!");
+          Console.WriteLine("Cidade excluida com sucesso!");
       }catch(Exception e) {
-        Console.WriteLine($"Erro ao cadastrar cidade: {e.Message}");
+        Console.WriteLine($"Erro ao excluir cidade: {e.Message}");
       }
    }
    
