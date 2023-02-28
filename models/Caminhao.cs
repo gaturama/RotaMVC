@@ -43,9 +43,9 @@ namespace Model
             {
                 Caminhao? caminhao = Caminhaos.Find(c => c.Id ==idCaminhao);
                 if(caminhao == null) {
-                    throw new Exception("Esta cidade não foi encontrada!");
+                    throw new Exception("Este caminhão não foi encontrado!");
                     }
-                return cidade;
+                return caminhao;
             }
       }
 }
