@@ -1,6 +1,6 @@
 namespace View
 {
-  public Class Cidade
+  public class Cidade
   {
     public static void CadastrarCidade()
     {
