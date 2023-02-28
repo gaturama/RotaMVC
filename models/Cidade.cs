@@ -34,6 +34,13 @@ namespace Model
                 Cidades.Remove(cidade);
             }
 
-            public static Cidade BuscarCidade
-    }
+            public static Cidade BuscarCidade(int idCidade)
+            {
+                Cidade? cidade = Cidades.Find(c => c.Id ==id);
+                if (cidade == null) {
+                    throw new Exception("Esta cidade não foi encontrada!");
+                }
+                return cidade;
+            }     
+       }
 }
