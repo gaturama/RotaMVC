@@ -53,7 +53,7 @@ namespace Controller
            return Model.Caminhao.BuscarCaminhao(idConvert);
        }
         
-        public static List<Model.Caminhao> ListarCaminhoes()
+        public static List<Model.Caminhao> ListarCaminhaos()
         {
             return Model.Caminhao.Caminhaos;
         }

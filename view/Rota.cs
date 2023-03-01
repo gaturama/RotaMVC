@@ -1,9 +1,8 @@
 namespace View
 {
-  public class Rota
-  {
-    public static void CadastrarRota() 
-    {
+  public class Rota {
+    public static void CadastrarRota() {
+
       Console.WriteLine("Cadastrar Rota");
       Console.WriteLine("ID: ");
       string id = Console.ReadLine();
@@ -52,7 +51,7 @@ namespace View
       try{
           Controller.Rota.ExcluirRota(id);
           Console.WriteLine("Rota excluída com sucesso!");
-      }cacth(Exception) {
+      }catch(Exception) {
         Console.WriteLine("Não foi possível excluir a rota");
       }
    }

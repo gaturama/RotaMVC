@@ -5,15 +5,15 @@ namespace Model
 {
     public class Caminhao
     {
-        public int CaminhaoId { get; set; }
+        public int IdCaminhao { get; set; }
         public string Placa { get; set; }
         public string Motorista { get; set; }
 
         public static List<Caminhao> Caminhaos { get; set; } = new List<Caminhao>();
 
-        public Caminhao(int caminhaoId, string placa, string motorista)
+        public Caminhao(int idCaminhao, string placa, string motorista)
         {
-            caminhaoId = CaminhaoId;
+            IdCaminhao = idCaminhao;
             Placa = placa;
             Motorista = motorista;
             
@@ -22,26 +22,26 @@ namespace Model
         
         public override string ToString()
         {
-            return $"Id: {CaminhaoId}, Placa: {Placa}, Motorista: {Motorista}";
+            return $"Id: {IdCaminhao}, Placa: {Placa}, Motorista: {Motorista}";
         }
         
         public static void AlterarCaminhao (
-            int CaminhaoId, string placa, string motorista
+            int IdCaminhao, string placa, string motorista
             ){
-                Caminhao caminhao = BuscarCaminhao(CaminhaoId);
+                Caminhao caminhao = BuscarCaminhao(IdCaminhao);
                 caminhao.Placa = placa;
                 caminhao.Motorista = motorista;
             }
         
-        public static void ExcluirCaminhao (int CaminhaoId)
+        public static void ExcluirCaminhao (int IdCaminhao)
         {
-            Caminhao caminhao = BuscarCaminhao(CaminhaoId);
+            Caminhao caminhao = BuscarCaminhao(IdCaminhao);
             Caminhaos.Remove(caminhao);
         }
         
-        public static Caminhao BuscarCaminhao(int CaminhaoId)
+        public static Caminhao BuscarCaminhao(int IdCaminhao)
             {
-                Caminhao? caminhao = Caminhaos.Find(c => c.Id == CaminhaoId);
+                Caminhao? caminhao = Caminhaos.Find(c => c.IdCaminhao == IdCaminhao);
                 if(caminhao == null) {
                     throw new Exception("Este caminhão não foi encontrado!");
                     }

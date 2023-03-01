@@ -4,11 +4,11 @@ namespace Model
 {
     public class Cidade
     {
-        public int idCidade { get; set; }
+        public int IdCidade { get; set; }
         public string Nome { get; set; }
 
         public static List<Cidade> Cidades{ get; set; } = new List<Cidade>();
-        public Cidade(int IdCidade, string nome)
+        public Cidade(int idCidade, string nome)
         {
             IdCidade = idCidade;
             Nome = nome;
@@ -18,7 +18,7 @@ namespace Model
 
         public override string ToString()
         {
-            return $"Id: {idCidade}, Nome: {Nome}";
+            return $"Id: {IdCidade}, Nome: {Nome}";
         }
 
         public static void AlterarCidade (
@@ -36,7 +36,7 @@ namespace Model
 
             public static Cidade BuscarCidade(int idCidade)
             {
-                Cidade? cidade = Cidades.Find(c => c.Id ==id);
+                Cidade? cidade = Cidades.Find(c => c.IdCidade == idCidade);
                 if (cidade == null) {
                     throw new Exception("Esta cidade não foi encontrada!");
                 }

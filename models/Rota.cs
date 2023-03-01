@@ -6,11 +6,11 @@ namespace Model{
   public class Rota
   {
       public int Id { get; set; }
-      private int_origemId;
-      public Cidade origem { get; set; }
-      private int_destinoId;
+      private int _origemId;
+      public Cidade Origem { get; set; }
+      private int _destinoId;
       public Cidade Destino { get; set; }
-      private int_caminhaoId;
+      private int _caminhaoId;
       public Caminhao Caminhao { get; set; }
       public DateTime Data { get; set; }
 
@@ -22,14 +22,15 @@ namespace Model{
         Cidade destino,
         Caminhao caminhao,
         DateTime data
+
       ){
         Id = id;
         Origem = origem;
-        _origemId = origem.Id;
+        _origemId = origem.IdCidade;
         Destino = destino;
-        _destinoId = destino.Id;
-        Caminhao = caminhao
-        _caminhaoId = caminhao.Id;
+        _destinoId = destino.IdCidade;
+        Caminhao = caminhao;
+        _caminhaoId = caminhao.IdCaminhao;
         Data = data;
         
         Rotas.Add(this);
