@@ -2,7 +2,7 @@ namespace Controller
 {
     public class Cidade{
 
-        public static void CadastrarCidade(int idCidade, string nome)
+        public static void CadastrarCidade(string idCidade, string nome)
         {
             int idConvert = 0;
             try{
@@ -19,7 +19,7 @@ namespace Controller
         ){
             int idConvert = 0;
             try{
-                idConvert = Parse(idCidade)
+                idConvert = int.Parse(idCidade);
             }catch(Exception){
                 throw new Exception ("Este ID é inválido!");
             }
@@ -30,7 +30,7 @@ namespace Controller
         {
             int idConvert = 0;
             try{
-                idConvert = int.Parse(idCidade);
+                idConvert = int.Parse(id);
             }catch(Exception) {
                 throw new Exception ("Este ID é inválido!");
             }
@@ -41,7 +41,7 @@ namespace Controller
            {
                int idConvert = 0;
                try{
-                   idConvert = int.Parse(idCidade);
+                   idConvert = int.Parse(id);
                }catch(Exception) {
                    throw new Exception ("Este ID é inválido!");
                }

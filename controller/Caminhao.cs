@@ -7,7 +7,7 @@ namespace Controller
             string placa,
             string motorista
         ){
-            int Convert = 0;
+            int idConvert = 0;
             try{
                 idConvert = int.Parse(idCaminhao);
             }catch(Exception) {
@@ -23,7 +23,7 @@ namespace Controller
         ){
             int idConvert = 0;
             try{
-                idConvert = int.Parse(idCaminhao)
+                idConvert = int.Parse(idCaminhao);
             }catch(Exception) {
                 throw new Exception ("Este ID é inválido!");
             }
@@ -34,7 +34,7 @@ namespace Controller
         {
             int idConvert = 0;
             try{
-                idConvert = int.Parse(idCaminhao);
+                idConvert = int.Parse(id);
             }catch(Exception) {
                 throw new Exception ("Este ID é inválido!");
             }
@@ -45,7 +45,7 @@ namespace Controller
        {
            int idConvert = 0;
            try{
-               idConvert = int.Parse(idCaminhao);
+               idConvert = int.Parse(id);
            }catch(Exception) {
                throw new Exception ("Este ID é inválido!");
            }
@@ -55,7 +55,7 @@ namespace Controller
         
         public static List<Model.Caminhao> ListarCaminhoes()
         {
-            return Model.Caminhao.Caminhoes;
+            return Model.Caminhao.Caminhaos;
         }
     }
 }

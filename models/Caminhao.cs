@@ -5,15 +5,15 @@ namespace Model
 {
     public class Caminhao
     {
-        public int idCaminhao { get; set; }
+        public int CaminhaoId { get; set; }
         public string Placa { get; set; }
         public string Motorista { get; set; }
 
-        public static List<Caminhao> Caminhaos ={ get; set; } = new List<Caminhao>();
+        public static List<Caminhao> Caminhaos { get; set; } = new List<Caminhao>();
 
-        public Caminhao(int IdCaminhao, string placa, string motorista)
+        public Caminhao(int caminhaoId, string placa, string motorista)
         {
-            IdCaminhao = idCaminhao;
+            caminhaoId = CaminhaoId;
             Placa = placa;
             Motorista = motorista;
             
@@ -22,29 +22,30 @@ namespace Model
         
         public override string ToString()
         {
-            return $"Id: {idCaminhao}, Placa: {placa}, Motorista: {motorista}";
+            return $"Id: {CaminhaoId}, Placa: {Placa}, Motorista: {Motorista}";
         }
         
         public static void AlterarCaminhao (
-            int idCaminhao, string placa, string motorista)
-            {
-                Caminhao caminhao = BuscarCaminhao(idCaminhao);
+            int CaminhaoId, string placa, string motorista
+            ){
+                Caminhao caminhao = BuscarCaminhao(CaminhaoId);
                 caminhao.Placa = placa;
                 caminhao.Motorista = motorista;
             }
         
-        public static void ExcluirCaminhao (int idCaminhao)
+        public static void ExcluirCaminhao (int CaminhaoId)
         {
-            Caminhao caminhao = BuscarCaminhao(idCaminhao);
+            Caminhao caminhao = BuscarCaminhao(CaminhaoId);
             Caminhaos.Remove(caminhao);
         }
         
-        public static void Caminhao BuscarCaminhao(int idCaminhao)
+        public static Caminhao BuscarCaminhao(int CaminhaoId)
             {
-                Caminhao? caminhao = Caminhaos.Find(c => c.Id ==idCaminhao);
+                Caminhao? caminhao = Caminhaos.Find(c => c.Id == CaminhaoId);
                 if(caminhao == null) {
                     throw new Exception("Este caminhão não foi encontrado!");
                     }
+                    
                 return caminhao;
             }
       }

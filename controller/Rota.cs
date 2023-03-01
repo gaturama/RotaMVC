@@ -24,7 +24,7 @@ namespace Controller
             
             Model.Cidade origem = Model.Cidade.BuscarCidade(origemIdConvert);
             Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
-            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(idCaminhao));
+            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
             DateTime dataConvert = DateTime.Parse(data);
             Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert);
         }
@@ -33,7 +33,7 @@ namespace Controller
             string id,
             string origemId,
             string destinoId,
-            string idCaminhao
+            string caminhaoId,
             string data
         ){
             int idConvert  = 0;
@@ -43,9 +43,9 @@ namespace Controller
               throw new Exception("Este ID é inválido!");
             }
             
-            Model.Cidade origem = Model.Cidade.BuscarCidade(origemIdConvert);
+            Model.Cidade origem = Model.Cidade.BuscarCidade(int.Parse(origemId));
             Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
-            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(idCaminhao));
+            Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
             DateTime dataConvert = DateTime.Parse(data);
             Model.Rota.AlterarRota(idConvert, origem, destino, caminhao, dataConvert);
         }
@@ -78,7 +78,7 @@ namespace Controller
             IEnumerable<Model.Rota> rotas = from rota in Model.Rota.Rotas
                 join origem in Model.Cidade.Cidades on rota.Origem.Id equals origem.Id
                 join destino in Model.Cidade.Cidades on rota.Destino.Id equals destino.Id
-                join caminhao in Model.Caminhao.Caminhoes on rota.Caminhao.Id equals idCaminhao
+                join caminhao in Model.Caminhao.Caminhaos on rota.Caminhao.Id equals caminhao.Id
                 select rota;
             
             foreach (Model.Rota rota in rotas){
