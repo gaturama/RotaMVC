@@ -11,7 +11,7 @@ namespace Controller
             try{
                 idConvert = int.Parse(idCaminhao);
             }catch(Exception) {
-                throw new Exception ("Este ID é inválido!");
+                throw new Exception("Este ID é inválido!");
             }
             Model.Caminhao caminhao = new Model.Caminhao(idConvert, placa, motorista);
         }
@@ -25,7 +25,7 @@ namespace Controller
             try{
                 idConvert = int.Parse(idCaminhao);
             }catch(Exception) {
-                throw new Exception ("Este ID é inválido!");
+                throw new Exception("Este ID é inválido!");
             }
             Model.Caminhao.AlterarCaminhao(idConvert, placa, motorista);
         }
@@ -36,7 +36,7 @@ namespace Controller
             try{
                 idConvert = int.Parse(id);
             }catch(Exception) {
-                throw new Exception ("Este ID é inválido!");
+                throw new Exception("Este ID é inválido!");
             }
             Model.Caminhao.ExcluirCaminhao(idConvert);
         }
@@ -47,7 +47,7 @@ namespace Controller
            try{
                idConvert = int.Parse(id);
            }catch(Exception) {
-               throw new Exception ("Este ID é inválido!");
+               throw new Exception("Este ID é inválido!");
            }
            
            return Model.Caminhao.BuscarCaminhao(idConvert);

@@ -7,7 +7,7 @@ namespace Program
         Console.WriteLine("Rastreamento de Caminhões: ");
         int op = 0;
         do{
-            Console.WriteLine("=====================");
+            Console.WriteLine("=========================");
             Console.WriteLine("0- Sair");
             Console.WriteLine("1- Cadastrar Rota");
             Console.WriteLine("2- Alterar Rota");
@@ -21,7 +21,7 @@ namespace Program
             Console.WriteLine("10- Alterar Cidade");
             Console.WriteLine("11- Excluir Cidade");
             Console.WriteLine("12- Listar Cidades");
-            Console.WriteLine("=====================");
+            Console.WriteLine("=========================");
             Console.WriteLine("Opção: ");
             op = int.Parse(Console.ReadLine());
             

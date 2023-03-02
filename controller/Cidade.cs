@@ -10,6 +10,7 @@ namespace Controller
             }catch(Exception){
                 throw new Exception("Não foi possível cadastrar o cidade.");
             }
+
             Model.Cidade cidade = new Model.Cidade(idConvert, nome);
         }
         
@@ -21,8 +22,9 @@ namespace Controller
             try{
                 idConvert = int.Parse(idCidade);
             }catch(Exception){
-                throw new Exception ("Este ID é inválido!");
+                throw new Exception("Este ID é inválido!");
             }
+
             Model.Cidade.AlterarCidade(idConvert, nome);
         }
         
@@ -32,8 +34,9 @@ namespace Controller
             try{
                 idConvert = int.Parse(id);
             }catch(Exception) {
-                throw new Exception ("Este ID é inválido!");
+                throw new Exception("Este ID é inválido!");
             }
+            
             Model.Cidade.ExcluirCidade(idConvert);
         }
         
@@ -43,7 +46,7 @@ namespace Controller
                try{
                    idConvert = int.Parse(id);
                }catch(Exception) {
-                   throw new Exception ("Este ID é inválido!");
+                   throw new Exception("Este ID é inválido!");
                }
 
                return Model.Cidade.BuscarCidade(idConvert);
