@@ -2,45 +2,45 @@ using System;
 
 namespace Model
 {
-    public class Cidade
+public class Cidade
+{
+    public int IdCidade { get; set; }
+    public string Nome { get; set; }
+
+    public static List<Cidade> Cidades{ get; set; } = new List<Cidade>();
+    public Cidade(int idCidade, string nome)
     {
-        public int IdCidade { get; set; }
-        public string Nome { get; set; }
+        IdCidade = idCidade;
+        Nome = nome;
 
-        public static List<Cidade> Cidades{ get; set; } = new List<Cidade>();
-        public Cidade(int idCidade, string nome)
+        Cidades.Add(this);
+    }
+
+    public override string ToString()
+    {
+        return $"Id: {IdCidade}, Nome: {Nome}";
+    }
+
+    public static void AlterarCidade (
+        int idCidade, string nome)
         {
-            IdCidade = idCidade;
-            Nome = nome;
-
-            Cidades.Add(this);
+            Cidade cidade = BuscarCidade(idCidade);
+            cidade.Nome = nome;
         }
 
-        public override string ToString()
+        public static void ExcluirCidade (int idCidade)
         {
-            return $"Id: {IdCidade}, Nome: {Nome}";
+            Cidade cidade = BuscarCidade(idCidade);
+            Cidades.Remove(cidade);
         }
 
-        public static void AlterarCidade (
-            int idCidade, string nome)
-            {
-                Cidade cidade = BuscarCidade(idCidade);
-                cidade.Nome = nome;
+        public static Cidade BuscarCidade(int idCidade)
+        {
+            Cidade? cidade = Cidades.Find(c => c.IdCidade == idCidade);
+            if (cidade == null) {
+                throw new Exception("Esta cidade não foi encontrada!");
             }
-
-            public static void ExcluirCidade (int idCidade)
-            {
-                Cidade cidade = BuscarCidade(idCidade);
-                Cidades.Remove(cidade);
-            }
-
-            public static Cidade BuscarCidade(int idCidade)
-            {
-                Cidade? cidade = Cidades.Find(c => c.IdCidade == idCidade);
-                if (cidade == null) {
-                    throw new Exception("Esta cidade não foi encontrada!");
-                }
-                return cidade;
-            }     
-       }
+            return cidade;
+        }     
+    }
 }
