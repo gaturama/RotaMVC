@@ -1,0 +1,15 @@
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\bin\Debug\net7.0\Rota.exe
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\bin\Debug\net7.0\Rota.deps.json
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\bin\Debug\net7.0\Rota.runtimeconfig.json
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\bin\Debug\net7.0\Rota.dll
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\bin\Debug\net7.0\Rota.pdb
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.csproj.AssemblyReference.cache
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.AssemblyInfoInputs.cache
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.AssemblyInfo.cs
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.dll
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\refint\Rota.dll
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.pdb
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\Rota.genruntimeconfig.cache
+C:\Users\gabriel.oliveira20\Documents\Rota\Rota\obj\Debug\net7.0\ref\Rota.dll
