@@ -15,9 +15,9 @@ public class Rota {
       Console.WriteLine("Data: ");
       string data = Console.ReadLine();
       Console.WriteLine("Valor: ");
-      string ValorRota = Console.ReadLine();
+      string valorRota = Console.ReadLine();
       try{
-          Controller.Rota.CadastrarRota(id, origemId, destinoId, idCaminhao, data, ValorRota);
+          Controller.Rota.CadastrarRota(id, origemId, destinoId, idCaminhao, data, valorRota);
           Console.WriteLine("Rota cadastrada com sucesso!");
       }catch(Exception){
         Console.WriteLine("Não foi possível cadastrar a rota");

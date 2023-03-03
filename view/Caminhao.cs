@@ -9,7 +9,7 @@ public class Caminhao
         string caminhaoId = Console.ReadLine();
         Console.WriteLine("Digite a Placa do caminhão: ");
         string placa = Console.ReadLine();
-        Console.WriteLine("Qual o motorista do caminhao: ");
+        Console.WriteLine("Qual o motorista do caminhão: ");
         string motorista = Console.ReadLine();    
         try{
             Controller.Caminhao.CadastrarCaminhao(caminhaoId, placa, motorista);
