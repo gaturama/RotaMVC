@@ -1,4 +1,4 @@
-namespace View
+namespace View // código da parte visual do programa, onde recebe as informações já prontas dos outros códigos!
 {
 public class Caminhao
 {

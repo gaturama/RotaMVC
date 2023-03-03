@@ -1,4 +1,4 @@
-namespace Program
+namespace Program //Código de apresentação de todo o programa
 {
 public class App
 {

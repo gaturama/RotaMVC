@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+//Códigos primários, onde é feito a introdução dos tipos int e double, além de realizar gets e sets.
+
 namespace Model{
 
 public class Rota
@@ -13,6 +15,8 @@ public class Rota
     private int _caminhaoId;
     public Caminhao Caminhao { get; set; }
     public DateTime Data { get; set; }
+    public double ValorRota {get; set; }
+    private double _valorRota;
 
     public static List<Rota> Rotas { get; set; } = new List<Rota>();
 
@@ -21,7 +25,8 @@ public class Rota
       Cidade origem,
       Cidade destino,
       Caminhao caminhao,
-      DateTime data
+      DateTime data,
+      double ValorRota
 
     ){
       Id = id;
@@ -32,13 +37,14 @@ public class Rota
       Caminhao = caminhao;
       _caminhaoId = caminhao.IdCaminhao;
       Data = data;
+      _valorRota = ValorRota;
       
       Rotas.Add(this);
     }
     
     public override string ToString()
     {
-      return $"Id: {Id}, Origem: {Origem}, Destino: {Destino}, Caminhão: {Caminhao}, Data: {Data}";
+      return $"Id: {Id}, Origem: {Origem}, Destino: {Destino}, Caminhão: {Caminhao}, Data: {Data}, Valor: {ValorRota}";
     }
     
     public static void AlterarRota(
@@ -46,13 +52,15 @@ public class Rota
       Cidade origem,
       Cidade destino,
       Caminhao caminhao,
-      DateTime data
+      DateTime data,
+      double ValorRota
     ){
       Rota rota = BuscarRota(id);
       rota.Origem = origem;
       rota.Destino = destino;
       rota.Caminhao = caminhao;
       rota.Data = data;
+      rota.ValorRota = ValorRota;
     }
   
     public static void ExcluirRota(int id)

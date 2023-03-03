@@ -14,8 +14,10 @@ public class Rota {
       string idCaminhao = Console.ReadLine();
       Console.WriteLine("Data: ");
       string data = Console.ReadLine();
+      Console.WriteLine("Valor: ");
+      string ValorRota = Console.ReadLine();
       try{
-          Controller.Rota.CadastrarRota(id, origemId, destinoId, idCaminhao, data);
+          Controller.Rota.CadastrarRota(id, origemId, destinoId, idCaminhao, data, ValorRota);
           Console.WriteLine("Rota cadastrada com sucesso!");
       }catch(Exception){
         Console.WriteLine("Não foi possível cadastrar a rota");
@@ -35,8 +37,10 @@ public class Rota {
       string idCaminhao = Console.ReadLine();
       Console.WriteLine("Data: ");
       string data = Console.ReadLine();
+      Console.WriteLine("Valor: ");
+      string valorRota = Console.ReadLine();
       try{
-          Controller.Rota.AlterarRota(id, origemId, destinoId, idCaminhao, data);
+          Controller.Rota.AlterarRota(id, origemId, destinoId, idCaminhao, data, valorRota);
           Console.WriteLine("Rota alterada com sucesso!");
       }catch(Exception){
         Console.WriteLine("Não foi possível alterar a rota");

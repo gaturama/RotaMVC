@@ -1,4 +1,9 @@
-namespace Controller
+using System;
+using System.Collections;
+
+//Neste código será controlada toda a entrada de tipos string, conversão de int 
+
+namespace Controller 
 {
     public class Rota{
         public static void CadastrarRota(
@@ -6,7 +11,8 @@ namespace Controller
         string origemId, 
         string destinoId, 
         string caminhaoId, 
-        string data
+        string data,
+        string valorRota
     ){
 
         int idConvert = 0;
@@ -21,13 +27,20 @@ namespace Controller
             origemIdConvert = int.Parse(origemId);
         }catch(Exception) {
             throw new Exception("Este ID é inválido!");
-        }    
-            
+        }
+        double valorRotaConvert = 0;
+        try {
+            valorRotaConvert = double.Parse(valorRota);
+        } catch(Exception)  {
+            throw new Exception("O valor digitado é inválido");
+        }
+        
         Model.Cidade origem = Model.Cidade.BuscarCidade(origemIdConvert);
         Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
         Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
         DateTime dataConvert = DateTime.Parse(data);
-        Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert);
+
+        Model.Rota rota = new Model.Rota(idConvert, origem, destino, caminhao, dataConvert, valorRotaConvert);
         }
         
         public static void AlterarRota(
@@ -35,7 +48,8 @@ namespace Controller
         string origemId,
         string destinoId,
         string caminhaoId,
-        string data
+        string data,
+        string valorRota
         ){
 
         int idConvert  = 0;
@@ -45,11 +59,18 @@ namespace Controller
             throw new Exception("Este ID é inválido!");
         }
         
+        double valorRotaConvert = 0;
+        try {
+            valorRotaConvert = double.Parse(valorRota);
+        } catch(Exception)  {
+            throw new Exception("O valor digitado é inválido");
+        }
+        
         Model.Cidade origem = Model.Cidade.BuscarCidade(int.Parse(origemId));
         Model.Cidade destino = Model.Cidade.BuscarCidade(int.Parse(destinoId));
         Model.Caminhao caminhao = Model.Caminhao.BuscarCaminhao(int.Parse(caminhaoId));
         DateTime dataConvert = DateTime.Parse(data);
-        Model.Rota.AlterarRota(idConvert, origem, destino, caminhao, dataConvert);
+        Model.Rota.AlterarRota(idConvert, origem, destino, caminhao, dataConvert, valorRotaConvert);
     }
         
     public static void ExcluirRota(string id){
