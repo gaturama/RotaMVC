@@ -4,9 +4,9 @@ public class Cidade
 {
   public static void CadastrarCidade()
   {
-    Console.WriteLine("\nDigite o ID da cidade: ");
+    Console.WriteLine("Digite o ID da cidade: ");
     string idCidade = Console.ReadLine();
-    Console.WriteLine("\nDigite o nome da cidade: ");
+    Console.WriteLine("Digite o nome da cidade: ");
     string nome = Console.ReadLine();
     try{
         Controller.Cidade.CadastrarCidade(idCidade, nome);
@@ -18,9 +18,9 @@ public class Cidade
   
   public static void AlterarCidade()
   {
-    Console.WriteLine("\nDigite o ID da cidade: ");
+    Console.WriteLine("Digite o ID da cidade: ");
     string idCidade = Console.ReadLine();
-    Console.WriteLine("\nDigite o nome da cidade: ");
+    Console.WriteLine("Digite o nome da cidade: ");
     string nome = Console.ReadLine();
     try{
         Controller.Cidade.AlterarCidade(idCidade, nome);
@@ -32,7 +32,7 @@ public class Cidade
   
   public static void ExcluirCidade()
   {
-    Console.WriteLine("\nDigite o ID da cidade: ");
+    Console.WriteLine("Digite o ID da cidade: ");
     string idCidade = Console.ReadLine();
     try{
         Controller.Cidade.ExcluirCidade(idCidade);

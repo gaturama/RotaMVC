@@ -5,11 +5,11 @@ public class Caminhao
     public static void CadastrarCaminhao()
     {
         Console.WriteLine("Cadastrar caminhão");
-        Console.WriteLine("\nDigite o ID do caminhão: ");
+        Console.WriteLine("Digite o ID do caminhão: ");
         string caminhaoId = Console.ReadLine();
-        Console.WriteLine("\nDigite a Placa do caminhão: ");
+        Console.WriteLine("Digite a Placa do caminhão: ");
         string placa = Console.ReadLine();
-        Console.WriteLine("\nQual o motorista do caminhão: ");
+        Console.WriteLine("Qual o motorista do caminhão: ");
         string motorista = Console.ReadLine();    
         try{
             Controller.Caminhao.CadastrarCaminhao(caminhaoId, placa, motorista);
@@ -21,11 +21,11 @@ public class Caminhao
     
     public static void AlterarCaminhao()
     {
-        Console.WriteLine("\nDigite o ID do caminhão: ");
+        Console.WriteLine("Digite o ID do caminhão: ");
         string caminhaoId = Console.ReadLine();
-        Console.WriteLine("\nDigite a placa do caminhão: ");
+        Console.WriteLine("Digite a placa do caminhão: ");
         string placa = Console.ReadLine();
-        Console.WriteLine("\nQual o motorista do caminhão: ");
+        Console.WriteLine("Qual o motorista do caminhão: ");
         string motorista = Console.ReadLine();
         try{
             Controller.Caminhao.AlterarCaminhao(caminhaoId, placa, motorista);
@@ -37,7 +37,7 @@ public class Caminhao
     
     public static void ExcluirCaminhao()
     {
-        Console.WriteLine("\nDigite o ID do caminhão: ");
+        Console.WriteLine("Digite o ID do caminhão: ");
         string caminhaoId = Console.ReadLine();
         try{
             Controller.Caminhao.ExcluirCaminhao(caminhaoId);

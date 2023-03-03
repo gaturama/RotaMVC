@@ -4,17 +4,17 @@ public class Rota {
   public static void CadastrarRota() {
 
       Console.WriteLine("Cadastrar Rota");
-      Console.WriteLine("\nId da rota: ");
+      Console.WriteLine("Id da rota: ");
       string id = Console.ReadLine();
-      Console.WriteLine("\nOrigem: ");
+      Console.WriteLine("Origem: ");
       string origemId = Console.ReadLine();
-      Console.WriteLine("\nDestino: ");
+      Console.WriteLine("Destino: ");
       string destinoId = Console.ReadLine();
-      Console.WriteLine("\nCaminhão: ");
+      Console.WriteLine("Caminhão: ");
       string idCaminhao = Console.ReadLine();
       Console.WriteLine("Data: ");
       string data = Console.ReadLine();
-      Console.WriteLine("\nValor: ");
+      Console.WriteLine("Valor: ");
       string valorRota = Console.ReadLine();
       try{
           Controller.Rota.CadastrarRota(id, origemId, destinoId, idCaminhao, data, valorRota);
@@ -27,17 +27,17 @@ public class Rota {
   public static void AlterarRota()
   {
       Console.WriteLine("Alterar Rota");
-      Console.WriteLine("\nId da rota: ");
+      Console.WriteLine("Id da rota: ");
       string id = Console.ReadLine();
-      Console.WriteLine("\nOrigem: ");
+      Console.WriteLine("Origem: ");
       string origemId = Console.ReadLine();
-      Console.WriteLine("\nDestino: ");
+      Console.WriteLine("Destino: ");
       string destinoId = Console.ReadLine();
-      Console.WriteLine("\nCaminhão: ");
+      Console.WriteLine("Caminhão: ");
       string idCaminhao = Console.ReadLine();
       Console.WriteLine("Data: ");
       string data = Console.ReadLine();
-      Console.WriteLine("\nValor: ");
+      Console.WriteLine("Valor: ");
       string valorRota = Console.ReadLine();
       try{
           Controller.Rota.AlterarRota(id, origemId, destinoId, idCaminhao, data, valorRota);
@@ -50,7 +50,7 @@ public class Rota {
   public static void ExcluirRota()
   {
       Console.WriteLine("Excluir Rota");
-      Console.WriteLine("\nId da rota: ");
+      Console.WriteLine("Id da rota: ");
       string id = Console.ReadLine();
       try{
           Controller.Rota.ExcluirRota(id);
