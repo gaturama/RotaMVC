@@ -27,7 +27,7 @@ public class App
           
           switch (op){
           case 0:
-               Console.WriteLine("Life was like a box of chocolates… you never know what you're gonna get.");
+               Console.WriteLine("Life was like a box of chocolates… You never know what you're gonna get.");
                break;
           case 1:
                View.Rota.CadastrarRota();
