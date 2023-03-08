@@ -12,7 +12,7 @@
 
 ### 🛠️ CRUD
 
-**`C - Create | R - Read | U - Update | D - Delete`**
+<strong C - Create | R - Read | U - Update | D - Delete /strong>
 ---
 Esses termos descrevem as quatro operações básicas para criar e
 gerenciar elementos de dados persistentes, especialmente em bancos de dados relacionais e
