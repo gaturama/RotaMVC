@@ -29,7 +29,7 @@ As operações CRUD são amplamente utilizadas em muitos aplicativos suportados 
 Um banco de dados é uma coleção organizada de informações estruturadas,
 normalmente armazenadas eletronicamente em um sistema de computador.
 
-Os dados nos tipos mais comuns de bancos de dados em operação atualmente, 
+Os dados nos tipos mais comuns de **`bancos de dados`** em operação atualmente, 
 são modelados em linhas e colunas em uma série de tabelas para tornar o processamento 
 e a consulta de dados eficientes. Estes podem ser facilmente acessados, gerenciados,
 modificados, atualizados, controlados e organizados.
