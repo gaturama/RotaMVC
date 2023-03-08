@@ -9,6 +9,7 @@
 - Desenvolver um sistema de rastreamento de rotas
 - Utilizando **`CRUD`** para cada entidade criada
 - Banco de dados deve ser simulado através de um **`Collection`**.
+---
 
 ### 🛠️ CRUD
 
@@ -19,7 +20,6 @@ gerenciar elementos de dados persistentes, especialmente em bancos de dados rela
 NoSQL.
 
 As operações CRUD são amplamente utilizadas em muitos aplicativos suportados pelo banco de dados relacional subjacente. Esses quatro recursos principais de CRUD são muito comuns no suporte a uma variedade de funções-chave em diferentes modelos de negócios e verticais do setor.
-
 ---
 
 ### 🎲 Banco de Dados
