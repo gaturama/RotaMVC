@@ -36,5 +36,6 @@ modificados, atualizados, controlados e organizados.
 ---
 ### 🌐 Fontes de Pesquisa
 
+#
 -https://www.oracle.com/br/database/what-is-database/
 -https://programadoresdepre.com.br/o-que-e-crud/#:~:text=CRUD%20%C3%A9%20um%20acr%C3%B4nimo%20para,de%20dados%20relacionais%20e%20NoSQL.
