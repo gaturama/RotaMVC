@@ -32,3 +32,9 @@ Os dados nos tipos mais comuns de **`bancos de dados`** em operação atualmente
 são modelados em linhas e colunas em uma série de tabelas para tornar o processamento 
 e a consulta de dados eficientes. Estes podem ser facilmente acessados, gerenciados,
 modificados, atualizados, controlados e organizados.
+
+---
+### 🌐 Fontes de Pesquisa
+
+-https://www.oracle.com/br/database/what-is-database/
+-https://programadoresdepre.com.br/o-que-e-crud/#:~:text=CRUD%20%C3%A9%20um%20acr%C3%B4nimo%20para,de%20dados%20relacionais%20e%20NoSQL.
